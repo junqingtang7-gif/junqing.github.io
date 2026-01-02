@@ -1,0 +1,38 @@
+name: 自动编译并部署到 Pages
+
+on:
+  push:
+    branches: ["main"] # 监听 main 分支的推送
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. 检出代码
+        uses: actions/checkout@v4
+
+      - name: 2. 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 3. 安装依赖
+        run: npm install
+
+      - name: 4. 执行项目构建
+        run: npm run build # 这一步会把 .tsx 变成 .js
+
+      - name: 5. 上传构建后的静态文件
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 注意：如果是 Vite，路径通常是 dist；如果是 React App，通常是 build
+          path: ./dist 
+
+      - name: 6. 部署到 GitHub Pages
+        uses: actions/deploy-pages@v4
