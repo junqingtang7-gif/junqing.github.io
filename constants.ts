@@ -1,0 +1,155 @@
+
+import { Motorcycle, Category } from './types';
+
+export const KYMCO_MODELS: Motorcycle[] = [
+  {
+    id: 'ak550-premium',
+    name: 'AK 550 Premium',
+    series: '旗舰跑旅',
+    price: '89,800',
+    category: Category.TOURING,
+    image: 'https://images.unsplash.com/photo-1558981403-c5f91dbbe480?q=80&w=800&auto=format&fit=crop',
+    description: '光阳旗舰超级跑旅，搭载550cc并列双缸发动机，拥有极致的动力输出与弯道操控性能。',
+    specs: {
+      engineType: '并列双缸 DOHC 8V',
+      displacement: '550.4cc',
+      maxPower: '39.3kW / 7500rpm',
+      maxTorque: '52Nm / 6000rpm',
+      coolingSystem: '水冷',
+      fuelSystem: '电喷',
+      transmission: '湿式多片离合/皮带传动',
+      fuelCapacity: '15L',
+      seatHeight: '785mm',
+      curbWeight: '238kg',
+      tireFront: '120/70-R15',
+      tireRear: '160/60-R15',
+      brakingSystem: '前双盘Brembo辐射对四/后单盘',
+      absTcs: '弯道ABS + TCS牵引力控制'
+    }
+  },
+  {
+    id: 's350',
+    name: 'S350',
+    series: '跨界休旅',
+    price: '34,980',
+    category: Category.TOURING,
+    image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop',
+    description: '硬派跨界风格踏板，兼顾城市通勤与郊外轻度非铺装路面探索。',
+    specs: {
+      engineType: '单缸 SOHC 4V',
+      displacement: '321cc',
+      maxPower: '21.2kW / 7500rpm',
+      maxTorque: '28.6Nm / 5000rpm',
+      coolingSystem: '水冷',
+      fuelSystem: '电喷',
+      transmission: 'CVT',
+      fuelCapacity: '13L',
+      seatHeight: '785mm',
+      curbWeight: '192kg',
+      tireFront: '120/80-14',
+      tireRear: '150/70-13',
+      brakingSystem: '前后单碟',
+      absTcs: '双通道ABS + TCS'
+    }
+  },
+  {
+    id: 'krv180',
+    name: 'KRV 180',
+    series: '运动小钢炮',
+    price: '27,800',
+    category: Category.SPORT,
+    image: 'https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=800&auto=format&fit=crop',
+    description: '采用独立摇臂与PTM传动系统，打破传统踏板操控上限。',
+    specs: {
+      engineType: '单缸 4V',
+      displacement: '175.1cc',
+      maxPower: '12.5kW / 8000rpm',
+      maxTorque: '15.6Nm / 6000rpm',
+      coolingSystem: '水冷',
+      fuelSystem: '电喷',
+      transmission: 'PTM皮带传动',
+      fuelCapacity: '7.2L',
+      seatHeight: '795mm',
+      curbWeight: '143kg',
+      tireFront: '110/70-13',
+      tireRear: '130/70-13',
+      brakingSystem: '前后单碟',
+      absTcs: '双通道ABS + TCS'
+    }
+  },
+  {
+    id: 'like150',
+    name: 'Like 150',
+    series: '复古时尚',
+    price: '16,980',
+    category: Category.RETRO,
+    image: 'https://images.unsplash.com/photo-1605152276897-4f618f831968?q=80&w=800&auto=format&fit=crop',
+    description: '欧风复古踏板，ABS版本提供极高的安全性与优雅的骑行姿态。',
+    specs: {
+      engineType: '单缸 4V',
+      displacement: '149.6cc',
+      maxPower: '9.8kW / 8500rpm',
+      maxTorque: '12Nm / 6500rpm',
+      coolingSystem: '强制风冷',
+      fuelSystem: '电喷',
+      transmission: 'CVT',
+      fuelCapacity: '6.5L',
+      seatHeight: '790mm',
+      curbWeight: '128kg',
+      tireFront: '110/70-12',
+      tireRear: '130/70-12',
+      brakingSystem: '前后碟刹',
+      absTcs: '双通道ABS'
+    }
+  },
+  {
+    id: 'ct250',
+    name: 'CT 250',
+    series: '都市平踏',
+    price: '20,280',
+    category: Category.SCOOTER,
+    image: 'https://images.unsplash.com/photo-1599819811279-d5ad9cccf839?q=80&w=800&auto=format&fit=crop',
+    description: '实用的平踏板设计，解决大排量踏板储物与载物痛点。',
+    specs: {
+      engineType: '单缸 2V',
+      displacement: '249cc',
+      maxPower: '16kW / 7500rpm',
+      maxTorque: '22Nm / 6500rpm',
+      coolingSystem: '水冷',
+      fuelSystem: '电喷',
+      transmission: 'CVT',
+      fuelCapacity: '10.2L',
+      seatHeight: '780mm',
+      curbWeight: '194kg',
+      tireFront: '120/70-13',
+      tireRear: '150/70-13',
+      brakingSystem: '前后单碟',
+      absTcs: '双通道ABS'
+    }
+  },
+  {
+    id: 'st250',
+    name: 'ST 250 (赛艇)',
+    series: '中大型踏板',
+    price: '26,980',
+    category: Category.SCOOTER,
+    image: 'https://images.unsplash.com/photo-1558981420-87aa9dad1c89?q=80&w=800&auto=format&fit=crop',
+    description: '光阳赛艇系列经典之作，动力均衡，储物空间大。',
+    specs: {
+      engineType: '单缸 4V',
+      displacement: '249cc',
+      maxPower: '17.2kW / 7500rpm',
+      maxTorque: '23.6Nm / 6000rpm',
+      coolingSystem: '水冷',
+      fuelSystem: '电喷',
+      transmission: 'CVT',
+      fuelCapacity: '10.5L',
+      seatHeight: '770mm',
+      curbWeight: '192kg',
+      tireFront: '120/70-13',
+      tireRear: '150/70-13',
+      brakingSystem: '前后单碟',
+      absTcs: '双通道ABS + TCS'
+    }
+  }
+];
